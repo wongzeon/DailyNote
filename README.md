@@ -22,8 +22,8 @@ crontab 设置 `30 9 * * *` 即每天9点半执行任务。
 ### 说明
 1. 本项目不得用于商业、营利性用途
 
-2. 新闻来源：新浪新闻排行榜(http://news.sina.com.cn/hotnews/)
+2. 新闻来源：[新浪新闻排行榜](http://news.sina.com.cn/hotnews/)
 
-3. 天气预报来源：中国天气网(http://www.weather.com.cn/)
+3. 天气预报来源：[中国天气网](http://www.weather.com.cn/)
 
 4. 可使用云函数触发执行，需要增加handler方法
