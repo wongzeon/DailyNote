@@ -13,11 +13,13 @@ crontab 设置 `30 9 * * *` 即每天9点半执行任务。
 企业微信注册链接：[注册](https://work.weixin.qq.com/wework_admin/register_wx?from=myhome_openApi)
 
 ### 使用条件
-1. 需要获得企业微信的wxid及应用的secret
+1. Python版本 >= 3.6
 
-2. Python版本 >= 3.6
+2. 需要Requests库，没有的则执行：`pip install requests`
 
-3. 到中国天气网查询自己想要的城市的天气信息，并将对应的html编号填入项目底部`city_code`之中
+3. 需要获得企业微信的wxid及应用的secret，并填入底部对应的`wxid`、`wxsecret`
+
+4. 到中国天气网查询自己想要的城市的天气信息，并将对应的html编号填入项目底部`city_code`之中
 
 ### 说明
 1. 本项目不得用于商业、营利性用途
