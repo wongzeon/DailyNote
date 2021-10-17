@@ -3,14 +3,14 @@ from os import environ
 from datetime import datetime
 environ['NO_PROXY'] = '*' #忽略系统代理，开着代理requests会报错
 
-def weather_info(city_code,timestamps):
+def weather_info(cookie,city_code,timestamps):
     w_headers = {
         "Accept": "*/*",
         "Accept-Encoding": "gzip, deflate",
         "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
         "Cache-Control": "no-cache",
         "Connection": "keep-alive",
-        "Cookie": "f_city=%E6%B7%B1%E5%9C%B3%7C101280601%7C; Hm_lvt_080dabacb001ad3dc8b9b9049b36d43b=1634031189,1634032018,1634032027; Hm_lpvt_080dabacb001ad3dc8b9b9049b36d43b=1634032251",
+        "Cookie": cookie,
         "DNT": "1",
         "Host": "d1.weather.com.cn",
         "Pragma": "no-cache",
@@ -82,7 +82,7 @@ def message_content(city_code,timestamps,info_time,news_list,sentence):
     content = (
         "******%s******\n"%day+
         "*************天气************\n\n"+
-        weather_info(city_code,timestamps)+
+        weather_info(cookie,city_code,timestamps)+
         "\n\n*************热闻************\n\n"+
         str(news_list[0:10]).replace("['","").replace("', '",'\n').replace("']",'\n')+ #只截取前10条新闻，微信推送有长度限制
         "\n*************一句************\n\n"+
@@ -106,6 +106,7 @@ def weixin_push(content):
 if __name__ == '__main__':
     #设定天气预报城市与查询时间
     city_code = '' #先在weather.com.cn上查询城市天气，网址结尾的数字替换即可
+    cookie = "" #在查询天气的时候，按F12，在控制台复制对应的cookie并填入
     info_time = datetime.now()
     timestamps = round(datetime.timestamp(info_time)*1000)
     #设定企业微信推送参数
