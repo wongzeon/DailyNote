@@ -19,7 +19,7 @@ crontab 设置 `30 9 * * *` 即每天9点半执行任务。
 
 3. 需要获得企业微信的wxid及应用的secret，并填入底部对应的`wxid`、`wxsecret`
 
-4. 到中国天气网查询自己想要的城市的天气信息，并将对应的html编号填入项目底部`city_code`之中
+4. 到中国天气网查询自己想要的城市的天气信息，并将对应的html编号、访问cookie填入项目底部`city_code`、`cookie`之中
 
 ### 更改一句话类型
 “一言”功能使用了[一言网](https://hitokoto.cn/)API
