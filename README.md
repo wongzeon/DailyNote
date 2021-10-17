@@ -55,3 +55,7 @@ crontab 设置 `30 9 * * *` 即每天9点半执行任务。
 3. 天气预报来源：[中国天气网](http://www.weather.com.cn/)
 
 4. 可使用云函数触发执行，需要增加main.handler方法
+
+### 效果
+可直接点击详情查看对应的新闻，手机端也无需确认继续访问，可直接访问（偶尔会触发继续访问提示）
+![效果.png](http://tva1.sinaimg.cn/large/008q9lbOgy1gvil1w1jmyj60pv0iw47b02.jpg)
