@@ -26,4 +26,4 @@ crontab 设置 `30 9 * * *` 即每天9点半执行任务。
 
 3. 天气预报来源：[中国天气网](http://www.weather.com.cn/)
 
-4. 可使用云函数触发执行，需要增加handler方法
+4. 可使用云函数触发执行，需要增加main.handler方法
