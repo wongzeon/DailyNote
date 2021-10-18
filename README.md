@@ -8,7 +8,7 @@ crontab 设置 `30 9 * * *` 即每天9点半执行任务。
 ### 微信推送
 ✅ 通过企业微信官方API进行推送，普通微信可关注对应的企业微信应用，即可在普通微信获取推送信息，无需下载企业微信APP
 
-✅ 注册企业微信，并新建一个应用，获取其编号和secret。[官方文档](https://work.weixin.qq.com/api/doc/90000/90135/90248)
+✅ 注册企业微信，并新建一个应用，获取其编号和secret。[官方文档](https://work.weixin.qq.com/api/doc/90000/90135/90236#%E6%96%87%E6%9C%AC%E6%B6%88%E6%81%AF)
 
 ✅ 企业微信注册链接：[注册](https://work.weixin.qq.com/wework_admin/register_wx?from=myhome_openApi)
 
