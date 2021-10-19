@@ -50,7 +50,7 @@ def get_news(news_type,news_time):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38"
     }
     news_url = 'http://top.news.sina.com.cn/ws/GetTopDataList.php?top_type=day&top_cat=%s&top_time=%s&top_show_num=20&top_order=DESC&js_var=news_'%(news_type,news_time)
-    news_req = requests.get(url=news_url,headers=news_headers).content.decode('unicode_escape').replace("var news_ = ","").replace("\\","").replace(r"\/\/","//").replace(";","")
+    news_req = requests.get(url=news_url,headers=news_headers).text.replace("var news_ = ","").replace(r"\/\/","//").replace(";","")
     format_news = json.loads(json.dumps(news_req ,ensure_ascii=False))
     news_sub = json.loads(format_news)['data'] #很奇怪，不loads两次的话，type会是str导致无法取值
     news_list = []
