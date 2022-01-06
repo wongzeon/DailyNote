@@ -1,6 +1,5 @@
 # -*- coding: utf8 -*-
 import requests,json
-from os import environ
 from datetime import datetime
 
 def weather_info(city_code,timestamps,cookie):
